@@ -44,7 +44,7 @@ for msg in consumer:
     try:
        Centenito_rec = {'name':name }
        print (Centenito_rec)
-       meme_id = db.memes_info.insert_one(Centenito_rec)
+       Centenito_id = db.Centenito_info.insert_one(Centenito_rec)
        print("Data inserted with record ids", Centenito_id)
     except:
        print("Could not insert into MongoDB")
