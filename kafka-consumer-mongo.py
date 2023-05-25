@@ -27,7 +27,7 @@ try:
     client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 
-    db = client.memes
+    db = client.Centenito
     print("MongoDB Connected successfully!")
 except:
     print("Could not connect to MongoDB")
@@ -42,9 +42,9 @@ for msg in consumer:
 
     # Create dictionary and ingest data into MongoDB
     try:
-       meme_rec = {'name':name }
-       print (meme_rec)
-       meme_id = db.memes_info.insert_one(meme_rec)
-       print("Data inserted with record ids", meme_id)
+       Centenito_rec = {'name':name }
+       print (Centenito_rec)
+       meme_id = db.memes_info.insert_one(Centenito_rec)
+       print("Data inserted with record ids", Centenito_id)
     except:
        print("Could not insert into MongoDB")
